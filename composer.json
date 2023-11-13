@@ -1,16 +1,26 @@
 {
-    "name": "mnastalski/przelewy24-laravel",
+    "name": "dominservice/przelewy24-laravel",
     "description": "Przelewy24 Laravel library",
     "keywords": [
         "laravel",
         "przelewy24",
-        "payments"
+        "payments",
+        "Cards",
+        "Charge card",
+        "Płatności",
+        "płatność kartą",
+        "płatności rekurencyjne",
+        "subskrypcja"
     ],
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/mnastalski/przelewy24-laravel",
+    "homepage": "https://github.com/dominservice/przelewy24-laravel",
     "authors": [
         {
+            "name": "Mateusz Domin",
+            "homepage": "https://dso.biz.pl",
+            "email": "biuro@dso.biz.pl"
+        }, {
             "name": "Mateusz Nastalski",
             "homepage": "https://nastalski.pl"
         }
@@ -19,7 +29,7 @@
         "php": "^8.1",
         "illuminate/contracts": ">=9.0",
         "illuminate/support": ">=9.0",
-        "mnastalski/przelewy24-php": "^1.0"
+        "dominservice/przelewy24-php": "^1.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0"

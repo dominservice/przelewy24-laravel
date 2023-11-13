@@ -1,6 +1,6 @@
 # Przelewy24 Laravel library
 
-Laravel wrapper for [mnastalski/przelewy24-php](https://github.com/mnastalski/przelewy24-php/).
+Laravel wrapper for [dominservice/przelewy24-php](https://github.com/dominservice/przelewy24-php/).
 
 ## Requirements
 
@@ -10,7 +10,7 @@ Laravel wrapper for [mnastalski/przelewy24-php](https://github.com/mnastalski/pr
 ## Installation
 
 ```shell
-composer require mnastalski/przelewy24-laravel
+composer require dominservice/przelewy24-laravel
 ```
 
 ## Configuration
@@ -21,6 +21,13 @@ Add the following to your `.env` file:
 PRZELEWY24_MERCHANT_ID=12345
 PRZELEWY24_REPORTS_KEY=f0ae...
 PRZELEWY24_CRC=aef0...
+PRZELEWY24_POS_ID=12345
+
+PRZELEWY24_SANDBOX_MERCHANT_ID=12345
+PRZELEWY24_SANDBOX_REPORTS_KEY=f0ae...
+PRZELEWY24_SANDBOX_CRC=aef0...
+PRZELEWY24_SANDBOX_POS_ID=12345
+
 PRZELEWY24_LIVE=false
 ```
 
@@ -64,7 +71,7 @@ class MyController
             email: $order->email,
             urlReturn: route('orders.success'),
             urlStatus: route('orders.webhook'),
-            // client: 'Mateusz Nastalski',
+            // client: 'Mateusz Domin',
             // currency: Currency::EUR,
             // language: Language::ENGLISH,
             // ...
@@ -141,4 +148,4 @@ class MyController
 
 ```
 
-As this package wraps the [mnastalski/przelewy24-php](https://github.com/mnastalski/przelewy24-php/) package, all methods are the same. For a more in-depth documentation, check its README.
+As this package wraps the [dominservice/przelewy24-php](https://github.com/dominservice/przelewy24-php/) package, all methods are the same. For a more in-depth documentation, check its README.

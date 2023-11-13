@@ -16,13 +16,20 @@ class Przelewy24ServiceProvider extends ServiceProvider implements DeferrablePro
         $this->app->singleton(Przelewy24::class, function (Application $app): Przelewy24 {
             $config = $app['config']['przelewy24'];
 
-            return new Przelewy24(
-                $config['merchant_id'],
-                $config['reports_key'],
-                $config['crc'],
-                $config['is_live'],
-                $config['pos_id']
-            );
+            return $config['is_live']
+                ? new Przelewy24(
+                    $config['merchant_id'],
+                    $config['reports_key'],
+                    $config['crc'],
+                    $config['is_live'],
+                    $config['pos_id']
+                ) : new Przelewy24(
+                    $config['sandbox_merchant_id'],
+                    $config['sandbox_reports_key'],
+                    $config['sandbox_crc'],
+                    $config['is_live'],
+                    $config['sandbox_pos_id']
+                );
         });
     }
 
